@@ -36,9 +36,8 @@ function handleSelect() {
       catInfo.style.display = 'block';
     })
     .catch(() => {
-      Notiflix.Notify.failure(
-        'Oops! Something went wrong! Try reloading the page!'
-      );
+      error.style.display = 'block';
+      loader.style.display = 'none';
     });
 }
 
@@ -61,7 +60,6 @@ fetchBreeds()
     breedSelect.style.display = 'block';
   })
   .catch(() => {
-    Notiflix.Notify.failure(
-      'Oops! Something went wrong! Try reloading the page!'
-    );
+    error.style.display = 'block';
+    loader.style.display = 'none';
   });
